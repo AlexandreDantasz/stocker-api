@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Vat8JETYrjrinvuYj5wJPgotVIa34Hx3Yg3DDTTJpK8=",
+  "Source": "stocker.api",
+  "BasePath": "_content/stocker.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
