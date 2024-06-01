@@ -16,7 +16,7 @@ Essa API foi construída para ser hospedada no [Google App Engine](https://cloud
 
 ## <a id="Post">Post</a>
 - ### <a id="PostCreateUser">Post Create User</a>
-    Adiciona o nome de uma coluna no banco de dados de um usuário.
+    Cadastra um usuário.
     - #### Requisição: 
         - emailUser (string necessária) -> email do usuário
         - password (string necessária) -> senha do usuário
