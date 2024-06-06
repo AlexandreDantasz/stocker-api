@@ -40,7 +40,7 @@ Essa API foi construída para ser hospedada no [Google App Engine](https://cloud
     - #### Resposta: 
         - Data (valor nulo)
         - Message (string) -> representa a mensagem de status a partir da requisição feita
-### <a id="GetDatabase">Post Database</a>
+- ### <a id="GetDatabase">Post Database</a>
     Retorna os dados de um banco de dados de um usuário.
     - #### Requisição: 
         - emailUser (string necessária) -> email do usuário
