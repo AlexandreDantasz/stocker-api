@@ -109,7 +109,7 @@ app.MapDelete("/deleteRow", ([FromBody] DeleteRowRequest req) => {
 });
 
 // Envia os dados do banco
-app.MapGet("/getDatabase", ([FromBody] GetDataBaseRequest req) => {
+app.MapPost("/getDatabase", ([FromBody] GetDataBaseRequest req) => {
     Console.WriteLine("Stocker > Procurando usuário...");
     int index = vigia.searchUser(db, req.emailUser);
     if (index != -1) {
@@ -131,7 +131,7 @@ app.MapGet("/getDatabase", ([FromBody] GetDataBaseRequest req) => {
     return new Response(null, "Usuário não cadastrado!", 409);
 });
 
-app.MapGet("/search", ([FromBody] SearchRequest req) => {
+app.MapPost("/search", ([FromBody] SearchRequest req) => {
     Console.WriteLine("Stocker > Procurando usuário...");
     int index = vigia.searchUser(db, req.emailUser);
     if (index != -1) {

@@ -6,9 +6,8 @@ Essa API foi construída para ser hospedada no [Google App Engine](https://cloud
     - [Post Create User](#PostCreateUser)
     - [Post Add Column](#PostAddColumn)
     - [Post Add Row](#PostAddRow)
-- [Get](#Get)
-    - [Get Database](#GetDatabase)
-    - [Get Search](#GetSearch)
+    - [Post Database](#GetDatabase)
+    - [Post Search](#GetSearch)
 - [Put](#Put)
     - [Put Update](#PutUpdate)
 - [Delete](#Delete)
@@ -41,9 +40,7 @@ Essa API foi construída para ser hospedada no [Google App Engine](https://cloud
     - #### Resposta: 
         - Data (valor nulo)
         - Message (string) -> representa a mensagem de status a partir da requisição feita
-
-## <a id="Get">Get</a>
-- ### <a id="GetDatabase">Get Database</a>
+### <a id="GetDatabase">Post Database</a>
     Retorna os dados de um banco de dados de um usuário.
     - #### Requisição: 
         - emailUser (string necessária) -> email do usuário
@@ -53,7 +50,7 @@ Essa API foi construída para ser hospedada no [Google App Engine](https://cloud
             - Chave (número inteiro) -> representa o número da linha
             - Valor (vetor de strings) -> representa os valores das colunas da linha
         - Message (string) -> representa a mensagem de status a partir da requisição feita
-- ### <a id="GetSearch">Get Search</a>
+- ### <a id="GetSearch">Post Search</a>
     Retorna os dados de uma busca no banco de dados de um usuário.
     - #### Requisição: 
         - emailUser (string necessária) -> email do usuário
