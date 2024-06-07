@@ -9,35 +9,39 @@ Essa API foi construída para ser hospedada no [Google App Engine](https://cloud
     - [Post Database](#GetDatabase)
     - [Post Search](#GetSearch)
 - [Put](#Put)
-    - [Put Update](#PutUpdate)
+    - [Put Update Element](#PutUpdateElement)
+    - [Put Update Column](#PutUpdateColumn)
 - [Delete](#Delete)
     - [Delete Row](#DeleteRow)
 
 ## <a id="Post">Post</a>
-- ### <a id="PostCreateUser">Post Create User</a>
+- ### <a id="PostCreateUser">Post Create User (/createUser)</a>
     Cadastra um usuário.
     - #### Requisição: 
         - emailUser (string necessária) -> email do usuário
         - password (string necessária) -> senha do usuário
     - #### Resposta: 
+        - Status (bool) -> representa o status da requisição feita
         - Data (valor nulo)
         - Message (string) -> representa a mensagem de status a partir da requisição feita
-- ### <a id="PostAddColumn">Post Add Column</a>
+- ### <a id="PostAddColumn">Post Add Column (/addColumn)</a>
     Adiciona o nome de uma coluna no banco de dados de um usuário.
     - #### Requisição: 
         - emailUser (string necessária) -> email do usuário
         - password (string necessária) -> senha do usuário
         - column (string necessária) -> nome da coluna para ser adicionado
     - #### Resposta: 
+        - Status (bool) -> representa o status da requisição feita
         - Data (valor nulo)
         - Message (string) -> representa a mensagem de status a partir da requisição feita
-- ### <a id="PostAddRow">Post Add Row</a>
+- ### <a id="PostAddRow">Post Add Row (/addRow)</a>
     Adiciona uma linha no banco de dados de um usuário.
     - #### Requisição: 
         - emailUser (string necessária) -> email do usuário
         - password (string necessária) -> senha do usuário
         - row (vetor de string necessário) -> linha para ser adicionada
     - #### Resposta: 
+        - Status (bool) -> representa o status da requisição feita
         - Data (valor nulo)
         - Message (string) -> representa a mensagem de status a partir da requisição feita
 - ### <a id="GetDatabase">Post Database</a>
@@ -46,11 +50,12 @@ Essa API foi construída para ser hospedada no [Google App Engine](https://cloud
         - emailUser (string necessária) -> email do usuário
         - password (string necessária) -> senha do usuário
     - #### Resposta: 
+        - Status (bool) -> representa o status da requisição feita
         - Data (Dicionário de chave inteira e valor de vetor de strings)
             - Chave (número inteiro) -> representa o número da linha
             - Valor (vetor de strings) -> representa os valores das colunas da linha
         - Message (string) -> representa a mensagem de status a partir da requisição feita
-- ### <a id="GetSearch">Post Search</a>
+- ### <a id="GetSearch">Post Search (/search)</a>
     Retorna os dados de uma busca no banco de dados de um usuário.
     - #### Requisição: 
         - emailUser (string necessária) -> email do usuário
@@ -58,13 +63,14 @@ Essa API foi construída para ser hospedada no [Google App Engine](https://cloud
         - key (string necessária) -> nome da coluna de referência
         - value (string necessária) -> valor da coluna de referência
     - #### Resposta: 
+        - Status (bool) -> representa o status da requisição feita
         - Data (Dicionário de chave inteira e valor de vetor de strings)
             - Chave (número inteiro) -> representa o número da linha
             - Valor (vetor de strings) -> representa os valores das colunas da linha
         - Message (string) -> representa a mensagem de status a partir da requisição feita
 
 ## <a id="Put">Put</a>
-- ### <a id="PutUpdate">Put Update</a>
+- ### <a id="PutUpdateElement">Put Update Element (/updateElement)</a>
     Atualiza um elemento no banco de dados do usuário.
     - #### Requisição: 
         - emailUser (string necessária) -> email do usuário
@@ -73,10 +79,23 @@ Essa API foi construída para ser hospedada no [Google App Engine](https://cloud
         - value (string necessária) -> valor atual da coluna especificada
         - newInfo (string necessária) -> valor substituto
     - #### Resposta: 
+        - Status (bool) -> representa o status da requisição feita
+        - Data (valor nulo)
+        - Message (string) -> representa a mensagem de status a partir da requisição feita
+- ### <a id="PutUpdateColumn">Put Update Column (/updateColumn)</a>
+    Atualiza um elemento no banco de dados do usuário.
+    - #### Requisição: 
+        - emailUser (string necessária) -> email do usuário
+        - password (string necessária) -> senha do usuário
+        - key (string necessária) -> nome da coluna de referência
+        - value (string necessária) -> valor atual da coluna especificada
+        - newInfo (string necessária) -> valor substituto
+    - #### Resposta: 
+        - Status (bool) -> representa o status da requisição feita
         - Data (valor nulo)
         - Message (string) -> representa a mensagem de status a partir da requisição feita
 ## <a id="Delete">Delete</a>
-- ### <a id="DeleteRow">Delete Row</a>
+- ### <a id="DeleteRow">Delete Row (/deleteRow)</a>
     Atualiza um elemento no banco de dados do usuário.
     - #### Requisição: 
         - emailUser (string necessária) -> email do usuário
@@ -85,5 +104,6 @@ Essa API foi construída para ser hospedada no [Google App Engine](https://cloud
         - value (string necessária) -> valor atual da coluna especificada
         - newInfo (string necessária) -> valor substituto
     - #### Resposta: 
+        - Status (bool) -> representa o status da requisição feita
         - Data (valor nulo)
         - Message (string) -> representa a mensagem de status a partir da requisição feita

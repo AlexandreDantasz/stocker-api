@@ -66,3 +66,5 @@ C:\Users\alexa\dev\Stocker-Cloud\stocker.api\obj\Debug\net8.0\refint\stocker.api
 C:\Users\alexa\dev\Stocker-Cloud\stocker.api\obj\Debug\net8.0\stocker.api.pdb
 C:\Users\alexa\dev\Stocker-Cloud\stocker.api\obj\Debug\net8.0\stocker.api.genruntimeconfig.cache
 C:\Users\alexa\dev\Stocker-Cloud\stocker.api\obj\Debug\net8.0\ref\stocker.api.dll
+C:\Users\alexa\dev\Stocker-Cloud\stocker.api\bin\Debug\net8.0\test\package-lock.json
+C:\Users\alexa\dev\Stocker-Cloud\stocker.api\bin\Debug\net8.0\test\package.json
