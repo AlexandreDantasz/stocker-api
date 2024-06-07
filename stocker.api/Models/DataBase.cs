@@ -119,4 +119,15 @@ public class DataBase {
         }
         return resp;
     }
+
+    public bool updateCol(string oldName, string newName) {
+        int index = 0;
+        for (; index < columns.Count && columns[index] != oldName; index++);
+        if (index == columns.Count) {
+            // não foi possível encontrar a coluna especificada
+            return false;
+        }
+        columns[index] = newName;
+        return true;
+    }
 }
