@@ -9,7 +9,16 @@ using stocker.api.Handlers;
 List<DataBase> db = new List<DataBase>(); // vai simular um banco de dados enquanto a API estiver sendo executada
 Vigia vigia = new Vigia(); // para fazer verificações dentro do "banco"
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options => {
+    options.AddPolicy("Temp", policy => {
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
+
+app.UseCors("Temp");
 
 // Cadastro de usuário
 app.MapPost("/createUser", ([FromBody] CreateUserRequest req) => {
